@@ -8,20 +8,21 @@
   <!-- Linking Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <!-- Custom CSS -->
-  <style>
-    .fadeIn {
-      animation: fadeIn 2s ease-in;
+<style>
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
     }
-    
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
+    100% {
+      opacity: 1;
     }
-  </style>
+  }
+  
+  .animate-fadeIn {
+    animation: fadeIn 2s ease-in;
+  }
+</style>
+
 </head>
 
 <body>
@@ -70,14 +71,15 @@
   </footer>
   
   <!-- Custom JavaScript for animation -->
-  <script>
-    window.addEventListener('DOMContentLoaded', (event) => {
-      const elements = document.querySelectorAll('.fadeIn');
-      elements.forEach(element => {
-        element.classList.add('animate-fadeIn');
-      });
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const elements = document.querySelectorAll('.fadeIn');
+    elements.forEach(element => {
+      element.classList.add('animate-fadeIn');
     });
-  </script>
+  });
+</script>
+
 </body>
 
 </html>
