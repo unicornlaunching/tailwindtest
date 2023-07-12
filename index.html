@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Landing Page</title>
+  <!-- Linking Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    .fadeIn {
+      animation: fadeIn 2s ease-in;
+    }
+    
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto">
+      <h1 class="text-4xl text-center">Welcome to My Landing Page</h1>
+    </div>
+  </header>
+  
+  <main class="py-16">
+    <div class="container mx-auto">
+      <section class="flex items-center">
+        <div class="w-1/2">
+          <h2 class="text-2xl">About Us</h2>
+          <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada ullamcorper dolor, eget bibendum est pellentesque a. Mauris ut velit vel metus vulputate rutrum.</p>
+        </div>
+        <div class="w-1/2">
+          <img src="image.jpg" alt="About Us" class="w-full">
+        </div>
+      </section>
+      
+      <section class="mt-16">
+        <h2 class="text-2xl">Features</h2>
+        <div class="grid grid-cols-3 gap-8 mt-8">
+          <div class="bg-gray-200 rounded-lg p-4">
+            <h3 class="text-xl">Feature 1</h3>
+            <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div class="bg-gray-200 rounded-lg p-4">
+            <h3 class="text-xl">Feature 2</h3>
+            <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div class="bg-gray-200 rounded-lg p-4">
+            <h3 class="text-xl">Feature 3</h3>
+            <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto">
+      <p class="text-center">© 2023 My Landing Page. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- Custom JavaScript for animation -->
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+      const elements = document.querySelectorAll('.fadeIn');
+      elements.forEach(element => {
+        element.classList.add('animate-fadeIn');
+      });
+    });
+  </script>
+</body>
+
+</html>
